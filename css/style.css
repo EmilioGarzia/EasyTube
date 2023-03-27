@@ -46,3 +46,9 @@ QCheckBox{
     background-color: white;
     color: black;
 }
+
+#credits{
+    font-size: 14px;
+    color: bisque;
+    margin-bottom: 30px;
+}

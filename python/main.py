@@ -9,14 +9,17 @@ import platform as p
 from PyQt5.QtWidgets import *
 from PyQt5.uic import loadUi
 from PyQt5.QtGui import *
+from inputLabel import InputLabel
 from pytube import YouTube
 from youtube_search import YoutubeSearch
 import urllib.request
 
 separator = "\\" if p.system() == "Windows" else "/"  #separator of file system
 max_results = 5                                       #max result of video query
+results = dict()
 
-class MainWindow(QWidget):
+
+class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         #load GUI
@@ -31,8 +34,27 @@ class MainWindow(QWidget):
         self.durations = []
         self.channels = []
         self.initializeArrayWidget()
+    
+    #Download Audio/Video Function [pytube API]
+    def downloadVideo(self, index):
+        global results
+        url = "https://www.youtube.com/watch?v=" + results[index]["id"]
+        output = ".{0}".format(separator) if self.outputFolderInputField.text() == "" else self.outputFolderInputField.text()
+        self.msgLabel.setText(results[index]["title"] + "\n[⚠] in download...")
 
+        if self.audioOnlyCheckbox.isChecked():
+            audio = YouTube(url).streams.get_audio_only()
+            audio.download(filename=results[index]["title"]+".mp3", output_path=output)
+        else:
+            video = YouTube(url)
+            stream = video.streams.get_highest_resolution()
+            stream.download(output_path=output)
+        
+        self.msgLabel.setText(results[index]["title"] + "\n[✔] Download complete!")
+
+    #Search on youtube Function [youtube_search API]
     def loadResults(self):
+        global results
         pixmap = QPixmap()
         keyword = self.searchInputField.text()
         results = YoutubeSearch(keyword, max_results=max_results).to_dict()
@@ -50,18 +72,23 @@ class MainWindow(QWidget):
         else:
             self.msgLabel.setText("No videos found")
     
+    #Browse directory dialog function
+    def outputFolderManager(self):
+        directory = QFileDialog.getExistingDirectory(self, "Select Directory", options=QFileDialog.ShowDirsOnly)
+        self.outputFolderInputField.setText(directory)
+    
+    #init all widget relative to video info
     def initializeArrayWidget(self):
         self.miniatures = [self.miniature1, self.miniature2, self.miniature3, self.miniature4, self.miniature5]
         self.titles = [self.title1, self.title2, self.title3, self.title4, self.title5 ]  
         self.durations = [self.duration1, self.duration2, self.duration3, self.duration4, self.duration5]
         self.channels = [self.channel1, self.channel2, self.channel3, self.channel4, self.channel5]
-
+    
     #set dark suite of main window
     def applyDarkTheme(self):
         with open("..{0}css{0}style.css".format(separator)) as myCSSfile:
             myCSS = myCSSfile.read()
             self.setStyleSheet(myCSS)
-
 
 #Main Code
 if __name__ == "__main__":

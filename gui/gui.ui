@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1081</width>
+    <width>1082</width>
     <height>940</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>EasyTube</string>
+   <string>EasyTube ver1.0</string>
   </property>
   <property name="windowIcon">
    <iconset>
@@ -297,7 +297,7 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>1042</width>
+           <width>1043</width>
            <height>1129</height>
           </rect>
          </property>
@@ -851,7 +851,7 @@
     <item>
      <widget class="QLabel" name="credits">
       <property name="text">
-       <string>2023, EasyTube is an open source project developed by Emilio Garzia for demonstration only</string>
+       <string>2023, EasyTube v1.0 is an open source project developed by Emilio Garzia for demonstration only</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>

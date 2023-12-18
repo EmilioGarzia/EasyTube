@@ -43,7 +43,7 @@ remove_space_in_name "$directory"
 mkdir -p "${directory}/Converted"
 
 # Iterate all file in the input directory and covert them into Converted directory
-for input_file in "$directory"/*.mp3; do
+for input_file in "$directory"/*; do
     # the conversion function must be runned in background "&"
     ffmpeg_conversion "${input_file}" $directory &
 done

@@ -1,13 +1,13 @@
 #### Summary
-* [EasyTube: Introduction](#easytube)
-    * [How to execute](#how-to-run)
-    * [Used technologies](#used-technologies)
-    * [Dependencies](#dependencies)
-    * [Screenshot](#screenshot)
-    * [MP3 Converter (Linux Users)](#mp3-converter-only-for-linux-users)
-        * [How to execute "Converter"](#how-to-execute-convertersh)
-    * [References](#references)
-    * [Author](#author)
+- [EasyTube](#easytube)
+  - [How to run](#how-to-run)
+  - [Used technologies](#used-technologies)
+  - [Dependencies](#dependencies)
+  - [Screenshot](#screenshot)
+  - [MP3 Converter *(Only for Linux Users)*](#mp3-converter-only-for-linux-users)
+    - [How to execute `Converter.sh`](#how-to-execute-convertersh)
+  - [References](#references)
+  - [Author](#author)
 
 # EasyTube
 
@@ -37,7 +37,7 @@ python main.py
 
 ## Screenshot
 
-![f](./EasyTube%20Screenshot.png)
+![screenshot](SVG/screenshot.png)
 
 ## MP3 Converter *(Only for Linux Users)*
 

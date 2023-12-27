@@ -6,7 +6,7 @@ QLabel{
     font-size: 14px;
 }
 
-#title1, #title2, #title3, #title4, #title5{
+#title1, #title2, #title3, #title4, #title5, #title6, #title7, #title8, #title9, #title10{
     font-size: 16px;
     color: #FF0066;
     font-weight: bold;
@@ -31,7 +31,7 @@ QCheckBox{
     font-size: 20px;
 }
 
-#searchButton, #browseOutputButton{
+#searchButton, #browseOutputButton, #downloadFromLinkButton{
     border-radius: 5px;
     padding-left: 10px;
     padding-right: 10px;
@@ -42,7 +42,7 @@ QCheckBox{
     background-color: greenyellow;
 }
 
-#searchButton:hover, #browseOutputButton:hover{
+#searchButton:hover, #browseOutputButton:hover, #downloadFromLinkButton:hover{
     background-color: white;
     color: black;
 }

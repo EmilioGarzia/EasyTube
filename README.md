@@ -28,6 +28,7 @@ Windows users can install EasyTube using a dedicated Setup installation wizard c
 
 To install EasyTube you must download only the installer named `EasyTube - Setup.exe` and execute it on your Windows System.
 
+ℹ: The executable file of EasyTube was generetad with `pyinstaller`
 ⚠: You can download the Installer directly from the Release section of this repositories.
 
 ## Used technologies

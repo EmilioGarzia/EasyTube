@@ -1,0 +1,12 @@
+EasyTube Installation:
+
+Download Audio/Video from YouTube
+
+IMPORTANT:
+
+Before install EasyTube you must install this dependencies:
+
+* Python ^3.10 
+* pytube
+* youtube_search
+* PyQt5

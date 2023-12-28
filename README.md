@@ -1,6 +1,7 @@
 #### Summary
 - [EasyTube](#easytube)
   - [How to run](#how-to-run)
+  - [How to install on Windows System](#how-to-install-on-windows-system)
   - [Used technologies](#used-technologies)
   - [Dependencies](#dependencies)
   - [Screenshot](#screenshot)
@@ -20,6 +21,14 @@ This software is written in **python**, to execute EasyTube with python interpre
 ```bash
 python main.py
 ```
+
+## How to install on Windows System
+
+Windows users can install EasyTube using a dedicated Setup installation wizard contained in the directory `EasyTube Windows Installer RAW`, in this directory you can find all source code of the wizard installer implemented with `INNO Setup`.
+
+To install EasyTube you must download only the installer named `EasyTube - Setup.exe` and execute it on your Windows System.
+
+⚠: You can download the Installer directly from the Release section of this repositories.
 
 ## Used technologies
 
@@ -70,6 +79,8 @@ To execute this converter open Linux terminal and insert the command:
 [youtube_search](https://pypi.org/project/youtube-search-python/#description)
 
 [ffmpeg](https://ffmpeg.org/)
+
+[Inno Setup](https://jrsoftware.org/)
 
 ## Author
 Emilio Garzia, 2023

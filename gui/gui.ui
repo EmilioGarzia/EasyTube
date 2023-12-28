@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>EasyTube ver1.1</string>
+   <string>EasyTube ver1.2</string>
   </property>
   <property name="windowIcon">
    <iconset>
@@ -385,7 +385,7 @@
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>-1707</y>
+           <y>0</y>
            <width>1370</width>
            <height>2214</height>
           </rect>
@@ -1357,7 +1357,7 @@
     <item>
      <widget class="QLabel" name="credits">
       <property name="text">
-       <string>2023, EasyTube v1.1 is an open source project developed by Emilio Garzia for demonstration only</string>
+       <string>2023, EasyTube v1.2 is an open source project developed by Emilio Garzia for demonstration only</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1428,15 +1428,15 @@
    <sender>downloadFromLinkButton</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
-   <slot>downloadFromLink()</slot>
+   <slot>downloadFromLinkThread()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>948</x>
-     <y>249</y>
+     <x>952</x>
+     <y>247</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1126</x>
-     <y>254</y>
+     <x>1115</x>
+     <y>257</y>
     </hint>
    </hints>
   </connection>
@@ -1445,5 +1445,6 @@
   <slot>loadResults()</slot>
   <slot>outputFolderManager()</slot>
   <slot>downloadFromLink()</slot>
+  <slot>downloadFromLinkThread()</slot>
  </slots>
 </ui>

@@ -14,12 +14,13 @@ from pytube import YouTube
 from pytube.exceptions import RegexMatchError
 from youtube_search import YoutubeSearch
 import urllib.request
+import threading as th
 
 separator = "\\" if p.system() == "Windows" else "/"  #separator of file system
 max_results = 10                                      #max result of video query
 results = dict()
 
-
+# Main Window Class
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -76,6 +77,10 @@ class MainWindow(QMainWindow):
         except RegexMatchError:
             self.msgLabel.setText("[❌] Link entered invalid, please enter a valid YouTube link!")
         
+    #Thread of download from link function
+    def downloadFromLinkThread(self):
+        thread = th.Thread(target=lambda: self.downloadFromLink())
+        thread.start()
         
 
     #Search on youtube Function [youtube_search API]

@@ -1,0 +1,54 @@
+QWidget{ background-color: rgb(45, 45, 45); }
+
+QLabel{
+    color: white;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+#title1, #title2, #title3, #title4, #title5, #title6, #title7, #title8, #title9, #title10{
+    font-size: 16px;
+    color: #FF0066;
+    font-weight: bold;
+}
+
+QLineEdit{
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: black;
+    border-color: white;
+    font-size: 14px;
+}
+
+QCheckBox{
+    color: white;
+    font-size: 14px;
+}
+
+#msgLabel{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#searchButton, #browseOutputButton, #downloadFromLinkButton{
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: greenyellow;
+}
+
+#searchButton:hover, #browseOutputButton:hover, #downloadFromLinkButton:hover{
+    background-color: white;
+    color: black;
+}
+
+#credits{
+    font-size: 14px;
+    color: bisque;
+    margin-bottom: 30px;
+}
